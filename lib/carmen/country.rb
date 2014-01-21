@@ -11,10 +11,12 @@ module Carmen
 
     attr_reader :alpha_2_code
     attr_reader :alpha_3_code
+    attr_reader :numeric_code
 
     def initialize(data={}, parent=nil)
       @alpha_2_code = data['alpha_2_code']
       @alpha_3_code = data['alpha_3_code']
+      @numeric_code = data['numeric_code']
       super
     end
 
@@ -45,7 +47,13 @@ module Carmen
   private
 
     def self.attribute_to_search_for_code(code)
-      code.to_s.size == 2 ? :alpha_2_code : :alpha_3_code
+      if code.to_s.size == 2
+        :alpha_2_code
+      elsif code =~ /\d{3}/
+        :numeric_code
+      else
+        :alpha_3_code
+      end
     end
 
     def subregion_directory
