@@ -56,6 +56,16 @@ module Carmen
       end
     end
 
+    def self.prepare_code_to_search(code)
+      if code.kind_of?(Numeric) # Handle numeric codes
+        code = '%03d' % code
+        warn '[WARNING] Please avoid of passing country codes as numbers to ' \
+             'Carmen::Country.coded method. It may lead to wrong country to ' \
+             'be found as Ruby may interpret number as octal (e.g. 071 is 41).'
+      end
+      code = code.to_s.downcase # Codes are alphanumeric
+    end
+
     def subregion_directory
       alpha_2_code.downcase
     end

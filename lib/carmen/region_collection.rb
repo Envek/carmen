@@ -26,5 +26,9 @@ module Carmen
       :code
     end
 
+    def prepare_code_to_search(code)
+      code = code.downcase # Codes are alphanumeric
+    end
+
   end
 end

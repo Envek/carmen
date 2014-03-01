@@ -8,11 +8,11 @@ module Carmen
     #
     # Returns a region with the supplied code, or nil ir none is found.
     def coded(code)
+      code = prepare_code_to_search(code)
       attribute = attribute_to_search_for_code(code)
       if attribute.nil?
         fail "could not find an attribute to search for code '#{code}'"
       end
-      code = code.downcase # Codes are all ASCII
       query_collection.find do |region|
         region.send(attribute).downcase == code
       end
