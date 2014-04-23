@@ -1,4 +1,8 @@
 ---
+- code: '40'
+  type: autonomous city
+- code: '43'
+  type: republic
 - code: AD
   type: republic
 - code: AL
