@@ -1,8 +1,4 @@
 ---
-- code: '40'
-  type: autonomous city
-- code: '43'
-  type: republic
 - code: AD
   type: republic
 - code: AL
@@ -29,6 +25,8 @@
   type: administrative region
 - code: CHU
   type: autonomous district
+- code: CR
+  type: republic
 - code: CU
   type: republic
 - code: DA
@@ -127,6 +125,8 @@
   type: administrative region
 - code: SE
   type: republic
+- code: SEV
+  type: autonomous city
 - code: SMO
   type: administrative region
 - code: SPE

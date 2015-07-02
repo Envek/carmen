@@ -2,10 +2,6 @@
 en:
   world:
     ru:
-      '40':
-        name: Sevastopol
-      '43':
-        name: Republic of Crimea
       ad:
         name: Adygeya, Respublika
       al:
@@ -32,6 +28,8 @@ en:
         name: Chelyabinskaya oblast'
       chu:
         name: Chukotskiy avtonomnyy okrug
+      cr:
+        name: Republic of Crimea
       cu:
         name: Chuvashskaya Respublika
       da:
@@ -130,6 +128,8 @@ en:
         name: Saratovskaya oblast'
       se:
         name: Severnaya Osetiya-Alaniya, Respublika
+      sev:
+        name: Sevastopol
       smo:
         name: Smolenskaya oblast'
       spe:
